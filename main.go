@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/guilhermerodrigues17/sleeper-app/service"
+	"github.com/guilhermerodrigues17/sleeper-app/internal/actions"
 )
 
 func main() {
@@ -57,14 +57,14 @@ func main() {
 		}
 
 		if action == "shutdown" {
-			if err := service.Shutdown(); err != nil {
+			if err := actions.Shutdown(); err != nil {
 				fmt.Fprintln(os.Stderr, "Erro: ", err)
 				return
 			}
 		}
 
 		if action == "suspend" {
-			if err := service.Suspend(); err != nil {
+			if err := actions.Suspend(); err != nil {
 				fmt.Fprintln(os.Stderr, "Erro: ", err)
 				return
 			}
