@@ -14,7 +14,7 @@ import (
 func main() {
 	fmt.Println("Digite um comando (ex: shutdown 2m, suspend 30s, sair)")
 	fmt.Println("Uso: <ação> <em quanto tempo>")
-	fmt.Println("Ações disponíveis: shutdown | suspend")
+	fmt.Println("Ações disponíveis: shutdown | suspend | sair")
 
 	scanner := bufio.NewScanner(os.Stdin)
 
