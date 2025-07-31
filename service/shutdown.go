@@ -7,6 +7,6 @@ import (
 
 func Shutdown() error {
 	fmt.Println("Executando shutdown...")
-	cmd := exec.Command("shutdown", "/s", "/t", "0")
+	cmd := exec.Command("shutdown.exe", "/s", "/t", "0")
 	return cmd.Run()
 }

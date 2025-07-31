@@ -69,6 +69,8 @@ func main() {
 				return
 			}
 		}
+
+		return
 	}
 
 	if err := scanner.Err(); err != nil {
