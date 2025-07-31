@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/guilhermerodrigues17/sleeper-app/internal/actions"
+	"github.com/guilhermerodrigues17/sleeper-app/internal/timer"
 )
 
 func main() {
@@ -52,8 +53,9 @@ func main() {
 		}
 
 		if duration > 0 {
-			fmt.Printf("A ação '%s' será executada. Duração até executar ação: %s \n", action, duration)
-			time.Sleep(duration)
+			fmt.Printf("A ação '%s' será executada. Tempo até a execução: %s \n", action, duration)
+			timer.Timer(duration)
+			println()
 		}
 
 		if action == "shutdown" {
